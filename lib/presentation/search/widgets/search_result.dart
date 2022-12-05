@@ -33,19 +33,23 @@ class SearchResultWidget extends StatelessWidget {
 }
 
 class MainCard extends StatelessWidget {
-  const MainCard({Key? key}) : super(key: key);
+  const  MainCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: NetworkImage(imageUrl), fit: BoxFit.cover),
-              borderRadius: BorderRadius.circular(7)
-              
-              ),
-
-      
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: 150,
+        height: 250,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage(
+                    "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mVhQd5ZiAcUJfFWPJRZW4Mliyur.jpg"),
+                fit: BoxFit.cover
+                ),
+            borderRadius: BorderRadius.circular(7)),
+      ),
     );
   }
 }
